@@ -1,0 +1,620 @@
+/* font-family: 'Bebas Neue', cursive; */
+/* font-family: 'Rubik Mono One', sans-serif;    za tekst kad haverujem */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main--color: rgb(43, 40, 40);
+    --second--color: rgb(255, 187, 0);
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+/* ------------------------------------------- */
+
+/* header */
+
+.header {
+    text-align: center;
+}
+
+#small-header {
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: grey;
+    font-weight: 200;
+}
+
+#big-header {
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: var(--main--color);
+}
+
+
+/* ------------------------------------------------ */
+
+
+/* nav */
+
+.nav-lists {
+    list-style: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.nav-lists li:hover {
+    background-color: var(--second--color);
+}
+
+.nav-lists li {
+
+    padding: 10px;
+}
+
+.nav-lists li a {
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--main--color);
+}
+
+
+/* ----------------------------------------- */
+
+
+
+/* section  */
+
+section {
+    margin-top: 30px;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* teks unutar slike */
+
+.content>h3 {
+    letter-spacing: 3px;
+    font-size: 35px;
+}
+
+.in-img-link {
+    background-color: var(--second--color);
+    text-decoration: none;
+    color: var(--main--color);
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+.dugme {
+    background-color: var(--second--color);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color: white;
+}
+
+
+.img-container>img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container>.content {
+    padding: 25px;
+    position: absolute;
+    inset: 0;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.623);
+    color: rgba(255, 255, 255, 0.856);
+}
+
+
+
+.img-container>img,
+.img-container>.content {
+    transition: 200ms ease-in-out;
+}
+
+/* prva slika i tekst */
+/* ovaj kod je za to da se slika koja na sebi ima klasu "blur" zabluruje.u supro  */
+.img-container:hover>img.blur {
+    filter: blur(5px);
+}
+
+
+/* ovim kodom tekst unutar slike postavljam difltno da se ne vidi.tek kad se haveruj onda se pojavi */
+.img-container>.content.fade {
+    opacity: 0;
+}
+
+.img-container:hover>.content.fade {
+    opacity: 1;
+}
+
+/* ----------------------------------------------- */
+
+
+/* footer */
+
+footer {
+    background-color: black;
+}
+
+.footer-cards {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.footer-cards h3 {
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+.footer-cards img {
+    padding: 10px 0;
+}
+
+footer p {
+    color: grey;
+
+    text-transform: none;
+}
+
+
+.working-time {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+}
+
+.working-time .days {
+    text-align: left;
+}
+
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    border-bottom: 1px rgba(128, 128, 128, 0.322) solid;
+    margin-top: 10px;
+}
+
+.footer-list li a {
+    color: gray;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------ */
+
+/* zuto futer  */
+
+.footer-and {
+    background-color: var(--second--color);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copy {
+    order: 2;
+}
+
+.footer-copy>p {
+    text-align: center;
+    color: var(--main--color);
+}
+
+.footer-small-lists ul {
+    text-align: center;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.footer-small-lists ul li {
+    padding: 5px;
+}
+
+.footer-small-lists ul li a {
+    color: var(--main--color);
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+
+/* media query */
+/* min-width 768px */
+
+@media screen and (min-width: 820px) {
+    /* header */
+
+    .header {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #small-header {
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: grey;
+        font-weight: 200;
+    }
+
+    #big-header {
+        text-transform: uppercase;
+        font-size: 40px;
+        letter-spacing: 2px;
+        color: var(--main--color);
+    }
+
+
+    /* ------------------------------------------------ */
+
+
+    .nav-lists {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        /* text-align: center; */
+        margin-top: 30px;
+        border-bottom: 3px var(--second--color) solid;
+    }
+
+    .nav-lists li:hover {
+        background-color: var(--second--color);
+    }
+
+    .nav-lists li {
+
+        padding: 10px;
+    }
+
+    .nav-lists li a {
+        text-decoration: none;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: var(--main--color);
+        margin-right: 10px;
+        padding: 13px 20px;
+    }
+
+
+    /* ----------------------------------------- */
+
+    /* section  */
+
+    section {
+        margin: 30px 30px 0 30px;
+        /* display: flex;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img-container {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    /* teks unutar slike */
+
+    .content>h3 {
+        letter-spacing: 3px;
+        font-size: 35px;
+    }
+
+    .in-img-link {
+        background-color: var(--second--color);
+        text-decoration: none;
+        color: var(--main--color);
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding: 10px 15px;
+        margin-top: 15px;
+    }
+
+    .dugme {
+        background-color: var(--second--color);
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .img-container>img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .img-container>.content {
+        padding: 25px;
+        position: absolute;
+        inset: 0;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.623);
+        color: rgba(255, 255, 255, 0.856);
+    }
+
+
+
+    .img-container>img,
+    .img-container>.content {
+        transition: 200ms ease-in-out;
+    }
+
+    /* prva slika i tekst */
+    /* ovaj kod je za to da se slika koja na sebi ima klasu "blur" zabluruje.u supro  */
+    .img-container:hover>img.blur {
+        filter: blur(5px);
+    }
+
+
+    /* ovim kodom tekst unutar slike postavljam difltno da se ne vidi.tek kad se haveruj onda se pojavi */
+    .img-container>.content.fade {
+        opacity: 0;
+    }
+
+    .img-container:hover>.content.fade {
+        opacity: 1;
+    }
+
+
+    /* ----------------------------------------------- */
+
+
+    /* footer */
+
+    footer {
+        background-color: black;
+        margin: 0 30px;
+    }
+
+    .card-wraper {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .footer-cards {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding: 50px 20px;
+        width: 33%;
+        text-align: left;
+    }
+
+    .footer-cards h3 {
+        color: white;
+        font-weight: 200;
+        letter-spacing: 1px;
+        font-size: 17px;
+        border-left: 2px var(--second--color) solid;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .footer-cards img {
+        padding: 10px 0;
+    }
+
+    footer p {
+        color: grey;
+
+        text-transform: none;
+    }
+
+
+    .working-time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .working-time .days {
+        text-align: left;
+    }
+
+
+    .footer-list {
+        list-style: none;
+    }
+
+    .footer-list li {
+        border-bottom: 1px rgba(128, 128, 128, 0.322) solid;
+        margin-top: 10px;
+    }
+
+    .footer-list li a {
+        color: gray;
+        text-decoration: none;
+    }
+
+
+    /* ------------------------------------------ */
+
+    /* zuto futer  */
+
+    .footer-and {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--second--color);
+    }
+
+    .footer-copy>p {
+        color: var(--main--color);
+    }
+
+    .footer-small-lists ul {
+        text-align: center;
+        padding: 10px 0;
+        list-style: none;
+        display: flex;
+
+    }
+
+    .footer-small-lists ul li {
+        padding: 5px;
+    }
+
+    .footer-small-lists ul li a {
+        color: var(--main--color);
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+/* media */
+
+/* min-with 1024px */
+
+@media screen and (min-width: 1024px) {
+    /* section  */
+
+    section {
+        margin: 30px 30px 0 30px;
+        /* display: flex;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .img-container {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    /* teks unutar slike */
+
+    .content>h3 {
+        letter-spacing: 3px;
+        font-size: 35px;
+    }
+
+    .in-img-link {
+        background-color: var(--second--color);
+        text-decoration: none;
+        color: var(--main--color);
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding: 10px 15px;
+        margin-top: 15px;
+    }
+
+    .dugme {
+        background-color: var(--second--color);
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .img-container>img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .img-container>.content {
+        padding: 25px;
+        position: absolute;
+        inset: 0;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.623);
+        color: rgba(255, 255, 255, 0.856);
+    }
+
+
+
+    .img-container>img,
+    .img-container>.content {
+        transition: 200ms ease-in-out;
+    }
+
+    /* prva slika i tekst */
+    /* ovaj kod je za to da se slika koja na sebi ima klasu "blur" zabluruje.u supro  */
+    .img-container:hover>img.blur {
+        filter: blur(5px);
+    }
+
+
+    /* ovim kodom tekst unutar slike postavljam difltno da se ne vidi.tek kad se haveruj onda se pojavi */
+    .img-container>.content.fade {
+        opacity: 0;
+    }
+
+    .img-container:hover>.content.fade {
+        opacity: 1;
+    }
+}
